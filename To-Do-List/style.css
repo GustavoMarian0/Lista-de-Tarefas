@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: url("img/dark-background.png");
+}
+
+.conteiner {
+    background-color: #d1d1d1;
+    width: 40%;
+    padding: 20px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+}
+
+.input-tarefa {
+    width: 68%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.btn-tarefa {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 15px;
+    background-color: rgba(0, 0, 0, 0.678);
+    float: right;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 550ms cubic-bezier(0.19, 1, 0.22, 1), transform 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+}
+
+.btn-tarefa::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 155px;
+    background: #fff;
+    opacity: 0.2;
+    top: -50px;
+    left: -75px;
+    transform: rotate(35deg);
+    z-index: -1;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-tarefa:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateX(10px);
+}
+
+.btn-tarefa:hover::before {
+    left: 100%; 
+}
+
+img {
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lista {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.tarefas {
+    background-color: #f2f2f2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+.tarefas:hover img {
+    opacity: 1;
+}
+
+.copy {
+    color: #fff;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.done {
+    background-color: rgba(8, 207, 8, 0.815);
+}                               
+
+@media screen and (max-width: 953px){
+    
+    .conteiner {
+        width: 55%;
+    }
+
+    .input-tarefa {
+        width: 60%; 
+    }
+    
+}
+
+@media screen and (max-width: 568px){
+    
+    .conteiner {
+        width: 90%;
+    }
+
+    .input-tarefa {
+        width: 60%; 
+    }
+    
+}
